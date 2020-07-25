@@ -1,0 +1,29 @@
+.question {
+    color: #46ac81;
+    font-family: proxima nova regular, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.answer {
+    font-family: proxima nova regular, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.basic-container {
+    padding: 30px;
+  }
+  .version-info {
+    font-size: 8pt;
+    float: right;
+    margin: 8px;
+  }
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+.mat-expansion-panel-header{ color: #46ac81}

@@ -1,0 +1,19 @@
+ <body>
+ <div *ngFor="let left of lefts;let count = index" style="margin-left:10px;margin-right:10px">
+
+    <div class='row'>
+        <div class='col'>
+            <h4><ng-container *ngFor="let title of left.titles">{{title}}<br></ng-container></h4>
+            <p>{{left.info}}</p>
+        </div>
+        <div class='col' *ngIf='rights.length>=count+1'>
+            <h4><ng-container *ngFor="let title of rights[count].titles">{{title}}<br></ng-container></h4>
+            <p>{{rights[count].info}}</p>
+        </div>
+    
+    </div>   
+
+</div> 
+<body>
+
+

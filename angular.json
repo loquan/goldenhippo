@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "goldenhippo-faq"
+    }
+  },
+  "defaultProject": "goldenhippo-faq",
+  "cli": {
+    "analytics": "51be1ce3-34f6-4681-858e-dc203684801c"
+  }
 }

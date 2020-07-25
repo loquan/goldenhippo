@@ -1,0 +1,9 @@
+.headline h2 {
+    color: #46ac81;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 35px;
+    text-align: center;
+}
