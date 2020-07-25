@@ -64,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "invest:build"
+            "browserTarget": "goldenhippo-faq:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "invest:build:production"
+              "browserTarget": "goldenhippo-faq:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "invest:build"
+            "browserTarget": "goldenhippo-faq:build"
           }
         },
         "test": {
@@ -113,18 +113,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "invest:serve"
+            "devServerTarget": "goldenhippo-faq:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "invest:serve:production"
+              "devServerTarget": "goldenhippo-faq:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "invest",
+  "defaultProject": "goldenhippo-faq",
   "cli": {
     "analytics": false
   }
