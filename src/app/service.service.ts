@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { map } from 'rxjs/operators';
 
 export interface Header {
   name: string;
@@ -38,6 +38,23 @@ export class ServiceService {
     return head;
 
   }
+
+
+
+
+  placeNBSPInfo(body:Body){
+
+    body.info=body.info.replace("Dr. Marty","Dr.\u00A0Marty");
+    body.info=body.info.replace("Nature's Blend","Nature's\u00A0Blend");
+    body.titles.map((title: string) => {
+      title=title.replace('Dr. Marty','Dr.\u00A0Marty');
+       title=title.replace("Nature's Blend","Nature's\u00A0Blend");
+
+    })
+
+    return body;
+  }
+
   getBody(){
     let body:Body [];
     body=[
@@ -59,20 +76,26 @@ export class ServiceService {
         ]
 
     //None Breaking Space
-    for(let i=0;i<body.length;i++)    
-     {
-         for(let j=0;j<body[i].titles.length;j++)
-         { 
-            body[i].titles[j]=body[i].titles[j].replace('Dr. Marty','Dr.\u00A0Marty');
-            body[i].titles[j]=body[i].titles[j].replace("Nature's Blend","Nature's\u00A0Blend");
+
+    
+
+  
+
+    // for(let i=0;i<body.length;i++)    
+    //  {
+    //      for(let j=0;j<body[i].titles.length;j++)
+    //      { 
+    //         body[i].titles[j]=body[i].titles[j].replace('Dr. Marty','Dr.\u00A0Marty');
+    //         body[i].titles[j]=body[i].titles[j].replace("Nature's Blend","Nature's\u00A0Blend");
             
-         }
-          body[i].info=body[i].info.replace("Dr. Marty","Dr.\u00A0Marty");
-          body[i].info=body[i].info.replace("Nature's Blend","Nature's\u00A0Blend");
+    //      }
+    //       body[i].info=body[i].info.replace("Dr. Marty","Dr.\u00A0Marty");
+    //       body[i].info=body[i].info.replace("Nature's Blend","Nature's\u00A0Blend");
           
 
-     }
-
+    //  }
+    //Using  ES6 MAPS
+    body.map(this.placeNBSPInfo);
     return body;    
 
 
